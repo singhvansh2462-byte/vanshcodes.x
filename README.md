@@ -1,13 +1,13 @@
-
+[index.html](https://github.com/user-attachments/files/27572725/index.html)
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vansh | Premium Web Developer</title>
-  <meta name="description" content="Portfolio of Vansh, a 15-year-old premium web developer from India specializing in stunning, high-performance websites." />
+  <title>Nytrixx | Premium Web Developer</title>
+  <meta name="description" content="Portfolio of Nytrixx, a 15-year-old premium web developer from India specializing in stunning, high-performance websites." />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Vansh | Premium Web Developer" />
+  <meta property="og:title" content="Nytrixx | Premium Web Developer" />
   <meta property="og:description" content="I build premium websites that drive results." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -488,7 +488,7 @@
 <!-- NAVBAR -->
 <nav id="navbar">
   <div class="nav-inner">
-    <button class="nav-logo" onclick="scrollToSection('home')">Vansh</button>
+    <button class="nav-logo" onclick="scrollToSection('home')">Nytrixx</button>
     <div class="nav-links">
       <a onclick="scrollToSection('home')">Home</a>
       <a onclick="scrollToSection('about')">About</a>
@@ -525,7 +525,7 @@
       <span class="gradient-text" id="typedText"></span><span class="cursor"></span>
     </h1>
     <p class="hero-sub">
-      I'm Vansh, a 15-year-old developer from India crafting high-performance, visually stunning websites that drive results.
+      I'm Nytrixx, a 15-year-old developer from India crafting high-performance, visually stunning websites that drive results.
     </p>
     <div class="hero-btns">
       <button class="btn-primary glow-gold" onclick="scrollToSection('contact')">
@@ -552,7 +552,7 @@
     <div class="about-grid">
       <div class="fade-in" style="transition-delay:0.1s">
         <div class="about-text">
-          <p>I'm <span>Vansh</span>, only 15, a passionate web developer from India. I started coding at 13 and haven't stopped since. I specialize in building premium, high-performance websites that don't just look good — they convert.</p>
+          <p>I'm <span>Nytrixx</span>, only 15, a passionate web developer from India. I started coding at 13 and haven't stopped since. I specialize in building premium, high-performance websites that don't just look good — they convert.</p>
           <p>From landing pages to full e-commerce platforms, I bring precision and creativity to every project. My clients get more than just a website — they get a digital asset built to last.</p>
         </div>
         <div class="about-tags">
@@ -919,18 +919,18 @@
               <div class="contact-val">+91 9456853697</div>
             </div>
           </a>
-          <a href="mailto:anubhavv8777@gmail.com" class="contact-item">
+          <a href="mailto:nytrixxofficial@gmail.com" class="contact-item">
             <div class="contact-icon">✉</div>
             <div>
               <div class="contact-lbl">Email</div>
-              <div class="contact-val">anubhavv8777@gmail.com</div>
+              <div class="contact-val">nytrixxofficial@gmail.com</div>
             </div>
           </a>
-          <a href="https://instagram.com/vanshcodes.x" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <a href="https://l.instagram.com/?u=https%3A%2F%2Fsinghvansh2462-byte.github.io%2Fvanshcodes.x%2F%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio" target="_blank" rel="noopener noreferrer" class="contact-item">
             <div class="contact-icon">📸</div>
             <div>
               <div class="contact-lbl">Instagram</div>
-              <div class="contact-val">@vanshcodes.x</div>
+              <div class="contact-val">@nytrixxofficial</div>
             </div>
           </a>
           <div class="contact-note">
@@ -965,12 +965,12 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <span class="footer-logo">Vansh</span>
-    <span class="footer-copy">© 2025 Vansh. All rights reserved.</span>
+    <span class="footer-logo">Nytrixx</span>
+    <span class="footer-copy">© 2025 Nytrixx. All rights reserved.</span>
     <div class="footer-links">
-      <a href="https://instagram.com/vanshcodes.x" target="_blank" rel="noopener noreferrer" title="Instagram">📸</a>
+      <a href="https://l.instagram.com/?u=https%3A%2F%2Fsinghvansh2462-byte.github.io%2Fvanshcodes.x%2F%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio" target="_blank" rel="noopener noreferrer" title="Instagram">📸</a>
       <a href="https://wa.me/919456853697" target="_blank" rel="noopener noreferrer" class="wa" title="WhatsApp">💬</a>
-      <a href="mailto:anubhavv8777@gmail.com" title="Email">✉</a>
+      <a href="mailto:nytrixxofficial@gmail.com" title="Email">✉</a>
     </div>
   </div>
 </footer>
