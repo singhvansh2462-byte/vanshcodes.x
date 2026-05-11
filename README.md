@@ -1,4 +1,3 @@
-[index.html](https://github.com/user-attachments/files/27572725/index.html)
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -524,8 +523,11 @@
     <h1 class="hero-headline">
       <span class="gradient-text" id="typedText"></span><span class="cursor"></span>
     </h1>
+    <p style="font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:20px;font-family:'Space Grotesk',sans-serif;">
+      A new age of creative tricks, premium design, aur futuristic identity
+    </p>
     <p class="hero-sub">
-      I'm Nytrixx, a 15-year-old developer from India crafting high-performance, visually stunning websites that drive results.
+      I'm <strong style="color:var(--fg)">Anubhav Singh</strong>, known as <strong style="background:linear-gradient(135deg,#f4c542,#ffd700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Nytrixx</strong> — a 15-year-old developer from India crafting high-performance, visually stunning websites that drive results.
     </p>
     <div class="hero-btns">
       <button class="btn-primary glow-gold" onclick="scrollToSection('contact')">
@@ -552,7 +554,7 @@
     <div class="about-grid">
       <div class="fade-in" style="transition-delay:0.1s">
         <div class="about-text">
-          <p>I'm <span>Nytrixx</span>, only 15, a passionate web developer from India. I started coding at 13 and haven't stopped since. I specialize in building premium, high-performance websites that don't just look good — they convert.</p>
+          <p>I'm <span>Anubhav Singh</span>, known as <span style="background:linear-gradient(135deg,#f4c542,#ffd700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700;">Nytrixx</span> — only 15, a passionate web developer from India. I started coding at 13 and haven't stopped since. I specialize in building premium, high-performance websites that don't just look good — they convert.</p>
           <p>From landing pages to full e-commerce platforms, I bring precision and creativity to every project. My clients get more than just a website — they get a digital asset built to last.</p>
         </div>
         <div class="about-tags">
