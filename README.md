@@ -1,8 +1,8 @@
-<html lang="en" class="dark">
+s<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>| Premium Web Developer</title>
+ <title>Nytrixx | Premium Web Developer</title>
   <meta name="description" content="Portfolio of Nytrixx, a 15-year-old premium web developer from India specializing in stunning, high-performance websites." />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Nytrixx | Premium Web Developer" />
