@@ -1,1114 +1,1112 @@
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title> | Premium Web Developer</title>
-  <meta name="description" content="Portfolio of Nytrixx, a 15-year-old premium web developer from India specializing in stunning, high-performance websites." />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Nytrixx | Premium Web Developer" />
-  <meta property="og:description" content="I build premium websites that drive results." />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="Nytrixx (Anubhav Singh) — premium animated portfolio for high-performance, futuristic web design." />
+  <title>Nytrixx — Premium Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg: #f8fafc;
-      --fg: #0f172a;
-      --card: #ffffff;
-      --border: #e2e8f0;
-      --muted: #f1f5f9;
-      --muted-fg: #64748b;
-      --primary: #c59a00;
-      --primary-fg: #ffffff;
-      --accent: #0099cc;
-      --input-bg: #f8fafc;
+    :root{
+      --bg0:#070A12;
+      --bg1:#0A0F22;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.12);
+      --text:#EAF0FF;
+      --muted: rgba(234,240,255,.72);
+      --gold:#F5C84B;
+      --cyan:#35E7FF;
+      --mag:#A78BFA;
+      --good:#36F095;
+      --shadow: 0 24px 80px rgba(0,0,0,.55);
+      --radius: 18px;
+      --radius2: 26px;
     }
 
-    html.dark {
-      --bg: #060c18;
-      --fg: #e8f0fe;
-      --card: #0d1526;
-      --border: #1e2d4a;
-      --muted: #111827;
-      --muted-fg: #94a3b8;
-      --primary: #f4c542;
-      --primary-fg: #060c18;
-      --accent: #00d8ff;
-      --input-bg: #0a1120;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Space Grotesk",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1000px 600px at 15% 10%, rgba(53,231,255,.18), transparent 55%),
+        radial-gradient(900px 520px at 85% 20%, rgba(245,200,75,.15), transparent 55%),
+        radial-gradient(750px 450px at 45% 80%, rgba(167,139,250,.12), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
     }
 
-    html { scroll-behavior: smooth; }
+    a{color:inherit;text-decoration:none}
+    button{font-family:inherit}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      min-height: 100vh;
-      transition: background 0.3s, color 0.3s;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; opacity: 0.5; }
-
-    /* Utility */
-    .gold-text {
-      background: linear-gradient(135deg, #f4c542, #ffd700, #f4c542);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .gradient-text {
-      background: linear-gradient(135deg, #f4c542 0%, #00d8ff 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .glow-gold { box-shadow: 0 0 20px rgba(244,197,66,0.5), 0 0 40px rgba(244,197,66,0.2); }
-    .glow-gold:hover { box-shadow: 0 0 30px rgba(244,197,66,0.7), 0 0 60px rgba(244,197,66,0.3); }
-
-    /* Grid background */
-    .grid-bg {
-      background-image:
-        linear-gradient(rgba(244,197,66,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(244,197,66,0.04) 1px, transparent 1px);
-      background-size: 60px 60px;
+    /* Subtle grid */
+    .grid{
+      position:fixed; inset:0; pointer-events:none; z-index:0;
+      background:
+        linear-gradient(to right, rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 46px 46px;
+      mask-image: radial-gradient(closest-side at 50% 20%, rgba(0,0,0,1), rgba(0,0,0,.2) 60%, transparent 78%);
+      opacity:.55;
     }
 
-    /* ── NAVBAR ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      height: 64px; display: flex; align-items: center;
-      padding: 0 24px;
-      transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+    /* Floating aurora blobs */
+    .aurora{
+      position:fixed; inset:-20vh -10vw; pointer-events:none; z-index:0;
+      filter: blur(32px);
+      opacity:.8;
+      background:
+        radial-gradient(420px 280px at 20% 20%, rgba(53,231,255,.22), transparent 60%),
+        radial-gradient(480px 320px at 75% 25%, rgba(245,200,75,.18), transparent 62%),
+        radial-gradient(420px 300px at 45% 70%, rgba(167,139,250,.16), transparent 62%);
+      animation: drift 12s ease-in-out infinite;
     }
-    nav.scrolled {
-      background: color-mix(in srgb, var(--bg) 80%, transparent);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    @keyframes drift{
+      0%,100%{transform:translate3d(0,0,0) scale(1)}
+      50%{transform:translate3d(-2%,1.5%,0) scale(1.02)}
     }
-    .nav-inner {
-      max-width: 1100px; width: 100%; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
+
+    .wrap{position:relative; z-index:1}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:30;
+      backdrop-filter: blur(12px);
+      background: rgba(7,10,18,.55);
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
-    .nav-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem; font-weight: 700;
-      background: linear-gradient(135deg, #f4c542, #ffd700);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      cursor: pointer; border: none; background-color: transparent;
-      letter-spacing: -0.02em;
+    .nav{
+      max-width:1180px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 18px;
+      gap:16px;
     }
-    .nav-links { display: flex; gap: 32px; }
-    .nav-links a {
-      font-size: 0.875rem; font-weight: 500; color: var(--muted-fg);
-      text-decoration: none; transition: color 0.2s; cursor: pointer;
+
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 210px;
     }
-    .nav-links a:hover { color: var(--primary); }
-    .nav-right { display: flex; align-items: center; gap: 12px; }
-    .theme-btn {
-      width: 36px; height: 36px; border-radius: 50%;
-      border: 1px solid var(--border); background: transparent;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      color: var(--primary); transition: border-color 0.2s, background 0.2s;
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(53,231,255,.9), rgba(53,231,255,0) 55%),
+        radial-gradient(circle at 70% 70%, rgba(245,200,75,.9), rgba(245,200,75,0) 55%),
+        linear-gradient(145deg, rgba(255,255,255,.18), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      position:relative;
+      overflow:hidden;
+    }
+    .logo::after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: conic-gradient(from 180deg, rgba(53,231,255,.0), rgba(53,231,255,.7), rgba(245,200,75,.7), rgba(167,139,250,.3), rgba(53,231,255,.0));
+      animation: spin 5.5s linear infinite;
+      opacity:.55;
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .brand h1{
+      margin:0; font-size:14px; letter-spacing:.08em; text-transform:uppercase;
+      color: rgba(234,240,255,.88);
+    }
+    .brand .name{
+      font-size:16px; font-weight:700; letter-spacing:.02em;
+      line-height:1.1;
+    }
+    .name span{
+      color: var(--cyan);
+      text-shadow: 0 0 20px rgba(53,231,255,.25);
+    }
+
+    nav ul{list-style:none; display:flex; gap:14px; padding:0; margin:0; align-items:center}
+    nav a{
+      display:inline-flex; align-items:center;
+      padding:10px 12px;
+      border-radius: 14px;
+      border:1px solid transparent;
+      color: rgba(234,240,255,.78);
+      transition: transform .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
+      font-weight:500;
+      font-size:13px;
+      white-space:nowrap;
+    }
+    nav a:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.05);
+      border-color: rgba(255,255,255,.12);
+      color: rgba(234,240,255,.95);
+    }
+
+    .navRight{display:flex; align-items:center; gap:12px}
+
+    .ctaSmall{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 10px 14px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.14);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      color: rgba(234,240,255,.92);
+      transition: transform .2s ease, border-color .2s ease;
+      font-weight:700; font-size:13px;
+    }
+    .ctaSmall:hover{transform: translateY(-1px); border-color: rgba(53,231,255,.35)}
+
+    .hamburger{display:none}
+    .mobileMenu{display:none}
+
+    /* Sections */
+    .section{
+      max-width:1180px;
+      margin:0 auto;
+      padding: 72px 18px;
+    }
+    .sectionHeader{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:18px; margin-bottom: 24px;
+    }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+      color: rgba(234,240,255,.7);
+    }
+    .kicker::before{
+      content:"";
+      width:10px; height:10px; border-radius:4px;
+      background: linear-gradient(135deg, var(--cyan), var(--gold));
+      box-shadow: 0 0 18px rgba(53,231,255,.3);
+    }
+    .sectionHeader h2{
+      margin:0;
+      font-size: 28px;
+      letter-spacing:-.02em;
+    }
+    .sectionHeader p{
+      margin:0;
+      color: var(--muted);
+      max-width: 420px;
+      font-size: 14px;
+      line-height:1.55;
+    }
+
+    /* Hero */
+    .hero{
+      padding: 48px 18px 20px;
+      max-width:1180px; margin:0 auto;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .heroLeft{
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow);
+      padding: 26px 22px;
+      position:relative;
+      overflow:hidden;
+    }
+    .heroLeft::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(900px 260px at 10% 0%, rgba(53,231,255,.18), transparent 60%),
+                  radial-gradient(760px 240px at 90% 10%, rgba(245,200,75,.16), transparent 58%),
+                  linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.0));
+      pointer-events:none;
+    }
+
+    .heroTopRow{display:flex; align-items:center; gap:12px; position:relative}
+    .badge{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      color: rgba(234,240,255,.88);
+      font-weight:600;
+      font-size:13px;
+    }
+    .badge .dot{
+      width:10px;height:10px;border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, rgba(53,231,255,.95), rgba(53,231,255,.0) 60%),
+                  linear-gradient(135deg, var(--cyan), var(--gold));
+      box-shadow: 0 0 18px rgba(53,231,255,.33);
+    }
+
+    .hero h2{
+      position:relative;
+      margin: 18px 0 12px;
+      font-size: 44px;
+      line-height:1.08;
+      letter-spacing:-.03em;
+    }
+    .gradientText{
+      background: linear-gradient(90deg, var(--gold), var(--cyan));
+      -webkit-background-clip:text; background-clip:text;
+      color: transparent;
+      text-shadow: 0 0 26px rgba(245,200,75,.18);
+    }
+
+    .hero p{
+      position:relative;
+      margin:0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height:1.65;
+      max-width: 650px;
+    }
+
+    .heroActions{
+      margin-top: 18px;
+      display:flex; gap:12px; flex-wrap:wrap;
+      position:relative;
+    }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding: 12px 16px;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      color: rgba(234,240,255,.92);
+      font-weight:800;
+      font-size: 14px;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{transform: translateY(-2px); border-color: rgba(255,255,255,.22)}
+
+    .btnPrimary{
+      background: linear-gradient(135deg, rgba(53,231,255,.22), rgba(245,200,75,.20));
+      border-color: rgba(53,231,255,.35);
+      box-shadow: 0 18px 50px rgba(53,231,255,.10);
+      position:relative;
+      overflow:hidden;
+    }
+    .btnPrimary::after{
+      content:"";
+      position:absolute; inset:-50%;
+      background: conic-gradient(from 180deg, rgba(53,231,255,0), rgba(53,231,255,.65), rgba(245,200,75,.55), rgba(53,231,255,0));
+      opacity:.35;
+      animation: spin 6.5s linear infinite;
+    }
+    .btnPrimary span{position:relative; z-index:1}
+
+    .btnGhost{
+      background: rgba(255,255,255,.03);
+      border-color: rgba(255,255,255,.14);
+    }
+
+    .heroRight{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+      padding: 18px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .statGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top: 10px;
+    }
+
+    .stat{
+      border-radius: 18px;
+      padding: 14px 12px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.10);
+      transition: transform .25s ease, border-color .25s ease;
+    }
+    .stat:hover{transform: translateY(-3px); border-color: rgba(53,231,255,.28)}
+
+    .stat .v{font-size: 18px; font-weight:900; letter-spacing:-.02em}
+    .stat .l{font-size: 12px; color: var(--muted); margin-top: 6px; line-height:1.35}
+
+    .orb{
+      width: 190px; height:190px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(53,231,255,.7), rgba(53,231,255,0) 55%),
+                  radial-gradient(circle at 70% 70%, rgba(245,200,75,.55), rgba(245,200,75,0) 60%),
+                  linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 40px 120px rgba(0,0,0,.55);
+      position:absolute; right:-52px; top:-52px;
+      animation: floaty 6s ease-in-out infinite;
+    }
+    @keyframes floaty{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-8px,10px,0)}}
+
+    .spark{
+      position:absolute; left: 16px; bottom: 18px;
+      width: calc(100% - 32px);
+      height: 110px;
+      background: radial-gradient(closest-side at 10% 50%, rgba(53,231,255,.22), transparent 60%),
+                  radial-gradient(closest-side at 90% 10%, rgba(245,200,75,.18), transparent 60%);
+      opacity:.8;
+      pointer-events:none;
+    }
+
+    /* About timeline & skills */
+    .twoCol{
+      display:grid; grid-template-columns: 1fr 1fr; gap: 18px;
+    }
+
+    .panel{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+      padding: 18px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .timeline{position:relative; padding-left: 18px}
+    .timeline::before{
+      content:""; position:absolute; left: 7px; top: 18px; bottom: 18px;
+      width:2px; background: linear-gradient(180deg, rgba(53,231,255,.7), rgba(245,200,75,.2));
+      opacity:.75;
+    }
+    .tItem{position:relative; padding: 12px 0 12px 12px}
+    .tDot{position:absolute; left:-8px; top: 20px; width: 14px; height:14px; border-radius:5px;
+      background: linear-gradient(135deg, var(--cyan), var(--gold));
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow: 0 0 18px rgba(53,231,255,.25);
+    }
+    .tItem h3{margin:0; font-size: 14px; letter-spacing:-.01em}
+    .tItem p{margin:8px 0 0; color: var(--muted); font-size: 13px; line-height:1.55}
+    
+    .skillsList{display:flex; flex-direction:column; gap:12px}
+    .skillRow{border:1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.03); border-radius: 18px; padding: 12px}
+    .skillTop{display:flex; justify-content:space-between; align-items:center; gap:10px}
+    .skillTop .sName{font-weight:800; font-size: 13px}
+    .skillTop .sPct{color: rgba(234,240,255,.78); font-weight:800; font-size: 13px}
+    .bar{height: 10px; border-radius: 999px; background: rgba(255,255,255,.08); margin-top: 10px; overflow:hidden; border:1px solid rgba(255,255,255,.10)}
+    .bar > i{display:block; height:100%; width:0%; background: linear-gradient(90deg, rgba(53,231,255,.9), rgba(245,200,75,.9)); border-radius: 999px; box-shadow: 0 0 20px rgba(53,231,255,.18)}
+
+    /* Cards grids */
+    .cards{display:grid; grid-template-columns: repeat(12, 1fr); gap: 14px}
+    .card{grid-column: span 6; border-radius: var(--radius2); border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      padding: 16px; position:relative; overflow:hidden;
+      transition: transform .25s ease, border-color .25s ease;
+      box-shadow: 0 18px 60px rgba(0,0,0,.28);
+    }
+    .card:hover{transform: translateY(-4px); border-color: rgba(53,231,255,.28)}
+    .cardWide{grid-column: span 4}
+
+    .card .tag{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 10px 12px; border-radius: 16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      font-weight:900; font-size: 13px;
+    }
+    .tag i{width:10px;height:10px;border-radius:4px; background: linear-gradient(135deg, var(--cyan), var(--gold)); display:inline-block; box-shadow:0 0 18px rgba(53,231,255,.25)}
+
+    .card h3{margin: 12px 0 8px; font-size: 18px}
+    .price{font-size: 13px; color: var(--muted); line-height:1.5}
+    .bullets{margin: 12px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px}
+    .bullets li{display:flex; gap:10px; align-items:flex-start; color: rgba(234,240,255,.84); font-size: 13px; line-height:1.45}
+    .check{
+      width: 18px; height: 18px; border-radius: 7px;
+      background: rgba(54,240,149,.12);
+      border:1px solid rgba(54,240,149,.30);
+      display:flex; align-items:center; justify-content:center;
+      color: rgba(54,240,149,.95);
+      font-weight:900; font-size: 12px;
+      flex: 0 0 auto;
+    }
+
+    /* Projects */
+    .project{
+      grid-column: span 4;
+      padding: 16px;
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      overflow:hidden;
+      position:relative;
+      transition: transform .25s ease, border-color .25s ease;
+      box-shadow: 0 18px 60px rgba(0,0,0,.28);
+      min-height: 210px;
+    }
+    .project:hover{transform: translateY(-4px); border-color: rgba(245,200,75,.28)}
+
+    .project .thumb{
+      height: 110px;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(200px 140px at 20% 30%, rgba(53,231,255,.28), transparent 62%),
+        radial-gradient(260px 160px at 80% 20%, rgba(245,200,75,.22), transparent 62%),
+        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      position:relative;
+      overflow:hidden;
+      transform: translateZ(0);
+    }
+    .thumb::after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: conic-gradient(from 180deg, rgba(53,231,255,0), rgba(53,231,255,.55), rgba(245,200,75,.5), rgba(167,139,250,.3), rgba(53,231,255,0));
+      opacity:.35;
+      animation: spin 10s linear infinite;
+    }
+    .project h3{margin: 12px 0 6px; font-size: 17px}
+    .project p{margin:0; color: var(--muted); font-size: 13px; line-height:1.55}
+
+    .project .mini{
+      margin-top: 12px;
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .pill{
+      font-size: 12px;
+      font-weight:900;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      color: rgba(234,240,255,.84);
+    }
+
+    /* Contact */
+    .contactGrid{display:grid; grid-template-columns: 1.05fr .95fr; gap: 14px; align-items:stretch}
+    .contactMeta{display:flex; flex-direction:column; gap: 12px}
+    .metaRow{display:flex; gap:12px; align-items:flex-start; padding: 14px; border-radius: 20px; border:1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.03)}
+    .metaIcon{
+      width: 38px; height:38px; border-radius: 16px;
+      background: linear-gradient(135deg, rgba(53,231,255,.22), rgba(245,200,75,.18));
+      border:1px solid rgba(255,255,255,.12);
+      display:flex; align-items:center; justify-content:center;
+      box-shadow: 0 18px 50px rgba(53,231,255,.08);
+      flex: 0 0 auto;
       font-size: 16px;
     }
-    .theme-btn:hover { border-color: var(--primary); background: var(--muted); }
-    .hamburger {
-      display: none; background: transparent; border: none;
-      cursor: pointer; color: var(--fg); font-size: 20px; padding: 4px;
-    }
-    .mobile-menu {
-      display: none; flex-direction: column; gap: 16px;
-      padding: 16px 24px 20px;
-      background: color-mix(in srgb, var(--bg) 95%, transparent);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a { font-size: 0.875rem; color: var(--muted-fg); text-decoration: none; cursor: pointer; }
-    .mobile-menu a:hover { color: var(--primary); }
+    .metaRow b{display:block; font-size: 13px}
+    .metaRow a{color: rgba(234,240,255,.88)}
+    .metaRow span{display:block; margin-top: 6px; color: var(--muted); font-size: 13px; line-height:1.45}
 
-    /* ── HERO ── */
-    #home {
-      min-height: 100vh; display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden; padding: 80px 24px 40px;
+    form{display:flex; flex-direction:column; gap: 12px}
+    .field{display:flex; flex-direction:column; gap: 8px}
+    label{font-size: 13px; color: rgba(234,240,255,.86); font-weight:800}
+    input, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      outline:none;
+      transition: border-color .2s ease, transform .2s ease;
     }
-    .hero-orb {
-      position: absolute; border-radius: 50%; pointer-events: none; filter: blur(80px); opacity: 0.12;
-    }
-    .hero-orb-1 { width: 400px; height: 400px; background: var(--primary); top: 20%; left: 15%; }
-    .hero-orb-2 { width: 320px; height: 320px; background: var(--accent); bottom: 20%; right: 15%; }
-    .hero-content { position: relative; z-index: 1; text-align: center; max-width: 800px; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
-      border-radius: 999px; padding: 6px 16px; margin-bottom: 32px;
-      font-size: 0.75rem; font-weight: 500; color: var(--primary);
-      background: color-mix(in srgb, var(--primary) 5%, transparent);
-      animation: fadeUp 0.6s ease both;
-    }
-    .hero-badge-dot {
-      width: 8px; height: 8px; border-radius: 50%; background: var(--primary);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(0.9)} }
-    .hero-headline {
-      font-size: clamp(2.5rem, 7vw, 5rem);
-      font-weight: 700; line-height: 1.1; margin-bottom: 24px;
-      animation: fadeUp 0.7s 0.1s ease both;
-    }
-    .cursor {
-      display: inline-block; width: 3px; height: 0.85em;
-      background: var(--primary); margin-left: 4px;
-      animation: blink 1s step-end infinite; vertical-align: middle;
-    }
-    @keyframes blink { 50% { opacity: 0; } }
-    .hero-sub {
-      font-size: clamp(1rem, 2.5vw, 1.25rem); color: var(--muted-fg);
-      max-width: 600px; margin: 0 auto 40px; line-height: 1.7;
-      animation: fadeUp 0.6s 0.3s ease both;
-    }
-    .hero-btns {
-      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
-      animation: fadeUp 0.6s 0.5s ease both;
-    }
-    .btn-primary {
-      padding: 14px 32px; background: var(--primary); color: var(--primary-fg);
-      border: none; border-radius: 10px; font-size: 0.875rem; font-weight: 600;
-      cursor: pointer; display: flex; align-items: center; gap: 8px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .btn-primary:hover { transform: scale(1.05); }
-    .btn-outline {
-      padding: 14px 32px; background: transparent; color: var(--fg);
-      border: 1px solid var(--border); border-radius: 10px; font-size: 0.875rem; font-weight: 600;
-      cursor: pointer; display: flex; align-items: center; gap: 8px;
-      transition: transform 0.2s, border-color 0.2s, color 0.2s;
-    }
-    .btn-outline:hover { transform: scale(1.05); border-color: var(--primary); color: var(--primary); }
-    .scroll-indicator {
-      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
-      display: flex; flex-direction: column; align-items: center; gap: 8px;
-      color: var(--muted-fg); font-size: 0.7rem;
-      animation: fadeIn 1s 1.5s ease both;
-    }
-    .scroll-box {
-      width: 20px; height: 32px; border: 1px solid var(--border);
-      border-radius: 10px; display: flex; align-items: flex-start;
-      justify-content: center; padding: 4px;
-    }
-    .scroll-dot {
-      width: 4px; height: 8px; background: var(--primary); border-radius: 2px;
-      animation: scrollBounce 1.5s ease-in-out infinite;
-    }
-    @keyframes scrollBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(12px)} }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
-    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    textarea{min-height: 120px; resize: vertical}
+    input:focus, textarea:focus{border-color: rgba(53,231,255,.35)}
 
-    /* ── SECTIONS COMMON ── */
-    section { padding: 96px 24px; }
-    .section-inner { max-width: 1100px; margin: 0 auto; }
-    .section-label {
-      font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.12em; color: var(--primary);
-    }
-    .section-title {
-      font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; margin-top: 12px;
-    }
-    .section-sub { color: var(--muted-fg); margin-top: 16px; max-width: 500px; line-height: 1.7; }
-    .section-header { text-align: center; margin-bottom: 64px; }
-    .section-header .section-sub { margin: 16px auto 0; }
-    .fade-in { opacity: 0; transform: translateY(32px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .formActions{display:flex; gap: 12px; flex-wrap:wrap; align-items:center; justify-content:space-between}
+    .hint{color: var(--muted); font-size: 12px}
 
-    /* ── ABOUT ── */
-    #about { background: transparent; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-    .about-text p { color: var(--muted-fg); line-height: 1.8; margin-bottom: 16px; font-size: 1.05rem; }
-    .about-text p span { color: var(--fg); font-weight: 600; }
-    .about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
-    .tag {
-      padding: 4px 14px; border-radius: 999px;
-      border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
-      color: var(--primary); font-size: 0.75rem; font-weight: 500;
-      background: color-mix(in srgb, var(--primary) 5%, transparent);
+    /* Footer */
+    footer{
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 24px 18px;
+      color: rgba(234,240,255,.78);
+      background: rgba(7,10,18,.35);
     }
-    .timeline { margin-top: 24px; }
-    .timeline-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted-fg); margin-bottom: 20px; }
-    .timeline-item { display: flex; gap: 16px; margin-bottom: 16px; }
-    .timeline-year { font-size: 0.7rem; font-weight: 700; color: var(--primary); width: 36px; margin-top: 4px; flex-shrink: 0; }
-    .timeline-dot-wrap { display: flex; align-items: flex-start; padding-top: 6px; }
-    .timeline-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
-    .timeline-event { font-size: 0.875rem; color: var(--muted-fg); padding-left: 12px; line-height: 1.5; }
-    .skills-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted-fg); margin-bottom: 28px; }
-    .skill { margin-bottom: 20px; }
-    .skill-header { display: flex; justify-content: space-between; margin-bottom: 6px; }
-    .skill-name { font-size: 0.875rem; font-weight: 500; }
-    .skill-pct { font-size: 0.875rem; color: var(--primary); font-weight: 600; }
-    .skill-track { height: 6px; background: var(--muted); border-radius: 3px; overflow: hidden; }
-    .skill-fill {
-      height: 100%; border-radius: 3px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      width: 0; transition: width 1.2s ease;
+    .footInner{max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; gap: 14px; flex-wrap:wrap}
+    .social{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+
+    /* Animations on scroll */
+    .reveal{opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .7s ease}
+    .reveal.in{opacity:1; transform: translateY(0)}
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .aurora, .orb, .btnPrimary::after, .thumb::after{animation:none !important}
+      .reveal{transition:none; opacity:1; transform:none}
+      .logo::after{animation:none}
     }
 
-    /* ── SERVICES ── */
-    #services { background: var(--muted); }
-    html.dark #services { background: color-mix(in srgb, var(--bg) 60%, var(--muted)); }
-    .cards-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 24px; position: relative;
-      transition: border-color 0.3s, transform 0.2s; height: 100%;
-      display: flex; flex-direction: column;
-    }
-    .card:hover { border-color: color-mix(in srgb, var(--primary) 50%, transparent); }
-    .card.popular {
-      border: 1px solid transparent;
-      background: linear-gradient(var(--card), var(--card)) padding-box,
-                  linear-gradient(135deg, #f4c542, #00d8ff) border-box;
-    }
-    .popular-badge {
-      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-      padding: 4px 14px; background: var(--primary); color: var(--primary-fg);
-      border-radius: 999px; font-size: 0.7rem; font-weight: 700; white-space: nowrap;
-    }
-    .card-tier { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
-    .card-price { font-size: 0.875rem; color: var(--primary); font-weight: 600; margin-bottom: 20px; }
-    .card-features { list-style: none; flex: 1; margin-bottom: 24px; }
-    .card-features li {
-      display: flex; align-items: flex-start; gap: 8px;
-      font-size: 0.875rem; color: var(--muted-fg); margin-bottom: 10px; line-height: 1.4;
-    }
-    .check { color: var(--primary); flex-shrink: 0; margin-top: 2px; font-size: 13px; }
-    .card-btn {
-      width: 100%; padding: 10px; border-radius: 10px; font-size: 0.875rem;
-      font-weight: 600; cursor: pointer; transition: transform 0.2s, color 0.2s, border-color 0.2s;
-    }
-    .card-btn:hover { transform: scale(1.04); }
-    .card-btn.primary-btn { background: var(--primary); color: var(--primary-fg); border: none; }
-    .card-btn.outline-btn { background: transparent; color: var(--fg); border: 1px solid var(--border); }
-    .card-btn.outline-btn:hover { border-color: var(--primary); color: var(--primary); }
-
-    /* ── PROJECTS ── */
-    #projects { background: transparent; }
-    .cards-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .project-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 16px; overflow: hidden; position: relative;
-      transition: border-color 0.3s, transform 0.2s;
-    }
-    .project-card:hover { border-color: color-mix(in srgb, var(--primary) 50%, transparent); }
-    .project-thumb {
-      height: 176px; display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
-    }
-    .project-thumb-title {
-      font-family: 'Space Grotesk', sans-serif;
-      color: #fff; font-size: 1.2rem; font-weight: 700;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.4); z-index: 1;
-    }
-    .project-overlay {
-      position: absolute; inset: 0; background: color-mix(in srgb, var(--bg) 92%, transparent);
-      display: flex; align-items: center; justify-content: center; gap: 12px;
-      opacity: 0; transition: opacity 0.3s;
-    }
-    .project-card:hover .project-overlay { opacity: 1; }
-    .overlay-btn {
-      padding: 8px 16px; border-radius: 8px; font-size: 0.8rem; font-weight: 600;
-      cursor: pointer; display: flex; align-items: center; gap: 6px;
-      transition: transform 0.2s;
-    }
-    .overlay-btn:hover { transform: scale(1.05); }
-    .overlay-btn.primary { background: var(--primary); color: var(--primary-fg); border: none; }
-    .overlay-btn.outline { background: transparent; border: 1px solid var(--border); color: var(--fg); }
-    .overlay-btn.outline:hover { border-color: var(--primary); color: var(--primary); }
-    .project-body { padding: 20px; }
-    .project-title { font-weight: 700; margin-bottom: 8px; }
-    .project-desc { font-size: 0.875rem; color: var(--muted-fg); line-height: 1.6; margin-bottom: 12px; }
-    .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tech-tag {
-      font-size: 0.7rem; padding: 2px 10px; border-radius: 6px;
-      background: color-mix(in srgb, var(--primary) 10%, transparent);
-      color: var(--primary);
-      border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns: 1fr;}
+      .twoCol{grid-template-columns: 1fr;}
+      .contactGrid{grid-template-columns: 1fr;}
+      nav ul{display:none}
+      .hamburger{display:inline-flex}
+      .mobileMenu{display:block}
+      .project{grid-column: span 6}
+      .card{grid-column: span 12}
+      .cardWide{grid-column: span 12}
+      .statGrid{grid-template-columns: 1fr 1fr}
     }
 
-    /* ── PRICING ── */
-    #pricing { background: var(--muted); }
-    html.dark #pricing { background: color-mix(in srgb, var(--bg) 60%, var(--muted)); }
-    .stats-row {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 40px 32px; margin: 48px 0;
-    }
-    .stat-item { text-align: center; }
-    .stat-number { font-size: 2.5rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; }
-    .stat-label { font-size: 0.8rem; color: var(--muted-fg); margin-top: 4px; }
-    .payment-note {
-      display: flex; align-items: center; justify-content: center; gap: 12px;
-      max-width: 400px; margin: 0 auto 48px;
-      padding: 16px; border-radius: 12px;
-      border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
-      background: color-mix(in srgb, var(--primary) 5%, transparent);
-      font-size: 0.875rem;
-    }
-    .payment-note span { color: var(--primary); font-weight: 600; }
-    .payment-note .sep { color: var(--muted-fg); }
-
-    /* ── CONTACT ── */
-    #contact { background: transparent; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .contact-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 32px; }
-    .contact-item {
-      display: flex; align-items: center; gap: 16px;
-      margin-bottom: 24px; text-decoration: none; color: inherit;
-    }
-    .contact-icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      border: 1px solid var(--border); background: var(--card);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px; color: var(--muted-fg);
-      transition: border-color 0.2s, background 0.2s, color 0.2s;
-    }
-    .contact-item:hover .contact-icon {
-      border-color: var(--primary);
-      background: color-mix(in srgb, var(--primary) 10%, transparent);
-      color: var(--primary);
-    }
-    .contact-item:hover .contact-val { color: var(--primary); }
-    .contact-lbl { font-size: 0.7rem; color: var(--muted-fg); }
-    .contact-val { font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
-    .contact-note {
-      margin-top: 32px; padding: 20px; border-radius: 12px;
-      background: color-mix(in srgb, var(--muted) 50%, transparent);
-      border: 1px solid var(--border); font-size: 0.875rem; color: var(--muted-fg); line-height: 1.8;
-    }
-    .contact-note strong { color: var(--fg); }
-    .contact-form-wrap {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 28px;
-    }
-    .form-group { margin-bottom: 16px; }
-    .form-label { font-size: 0.8rem; color: var(--muted-fg); margin-bottom: 6px; display: block; }
-    .form-input, .form-textarea {
-      width: 100%; padding: 12px 16px;
-      background: var(--input-bg); border: 1px solid var(--border);
-      border-radius: 10px; font-size: 0.875rem; color: var(--fg);
-      font-family: 'Inter', sans-serif; outline: none;
-      transition: border-color 0.2s;
-    }
-    .form-input:focus, .form-textarea:focus { border-color: var(--primary); }
-    .form-textarea { resize: none; height: 120px; }
-    .submit-btn {
-      width: 100%; padding: 14px; background: var(--primary); color: var(--primary-fg);
-      border: none; border-radius: 10px; font-size: 0.875rem; font-weight: 600;
-      cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
-      font-family: 'Inter', sans-serif;
-    }
-    .submit-btn:hover { transform: scale(1.02); }
-    .toast {
-      position: fixed; top: 24px; right: 24px; z-index: 9999;
-      background: #1a2640; color: #fff;
-      border: 1px solid rgba(244,197,66,0.3); border-radius: 12px;
-      padding: 16px 20px; font-size: 0.875rem;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      transform: translateX(120%); transition: transform 0.4s ease;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .toast.show { transform: translateX(0); }
-    .toast-icon { color: #4ade80; font-size: 18px; }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border); padding: 32px 24px;
-    }
-    .footer-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
-    }
-    .footer-logo {
-      font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700;
-      background: linear-gradient(135deg, #f4c542, #ffd700);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .footer-copy { font-size: 0.8rem; color: var(--muted-fg); }
-    .footer-links { display: flex; gap: 16px; }
-    .footer-links a {
-      color: var(--muted-fg); text-decoration: none; font-size: 18px;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--primary); }
-    .footer-links a.wa:hover { color: #25D366; }
-
-    /* ── WHATSAPP FLOATING ── */
-    .wa-float {
-      position: fixed; bottom: 24px; right: 24px; z-index: 500;
-      width: 56px; height: 56px; border-radius: 50%;
-      background: #25D366; display: flex; align-items: center; justify-content: center;
-      text-decoration: none; font-size: 26px; color: #fff;
-      box-shadow: 0 0 20px rgba(37,211,102,0.5);
-      transition: transform 0.3s;
-    }
-    .wa-float:hover { transform: scale(1.1); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .cards-4, .cards-3 { grid-template-columns: repeat(2, 1fr); }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .stats-row { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 640px) {
-      .cards-4, .cards-3 { grid-template-columns: 1fr; }
-      .stats-row { grid-template-columns: repeat(2, 1fr); }
-      .nav-links { display: none; }
-      .hamburger { display: block; }
-      section { padding: 72px 20px; }
+    @media (max-width: 560px){
+      .hero h2{font-size: 34px}
+      .project{grid-column: span 12}
+      .statGrid{grid-template-columns: 1fr}
     }
 
-    /* Tilt */
-    .tilt { transform-style: preserve-3d; transition: transform 0.2s ease; }
+    /* Mobile menu */
+    .hamburgerBtn{
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      padding: 10px 12px;
+      color: rgba(234,240,255,.92);
+      cursor:pointer;
+      font-weight:900;
+    }
+
+    .mobileDrawer{
+      max-width:1180px; margin: 0 auto; padding: 0 18px 16px;
+      display:none;
+    }
+    .mobileDrawer.open{display:block}
+    .mobileDrawer a{
+      display:block;
+      padding: 12px 12px;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      margin-top: 10px;
+      color: rgba(234,240,255,.9);
+      font-weight:900;
+      font-size: 14px;
+    }
+
   </style>
 </head>
 <body>
+  <div class="grid"></div>
+  <div class="aurora"></div>
 
-<!-- Toast -->
-<div class="toast" id="toast">
-  <span class="toast-icon">✓</span>
-  <span>Message sent! I'll get back to you soon.</span>
-</div>
+  <div class="wrap">
+    <header>
+      <div class="nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>Nytrixx <span>•</span> Portfolio</h1>
+            <div class="name">Anubhav <span>Singh</span></div>
+          </div>
+        </div>
 
-<!-- NAVBAR -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <button class="nav-logo" onclick="scrollToSection('home')">Nytrixx</button>
-    <div class="nav-links">
-      <a onclick="scrollToSection('home')">Home</a>
-      <a onclick="scrollToSection('about')">About</a>
-      <a onclick="scrollToSection('services')">Services</a>
-      <a onclick="scrollToSection('projects')">Projects</a>
-      <a onclick="scrollToSection('pricing')">Pricing</a>
-      <a onclick="scrollToSection('contact')">Contact</a>
-    </div>
-    <div class="nav-right">
-      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
-    </div>
-  </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a onclick="scrollToSection('home')">Home</a>
-  <a onclick="scrollToSection('about')">About</a>
-  <a onclick="scrollToSection('services')">Services</a>
-  <a onclick="scrollToSection('projects')">Projects</a>
-  <a onclick="scrollToSection('pricing')">Pricing</a>
-  <a onclick="scrollToSection('contact')">Contact</a>
-</div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
 
-<!-- HERO -->
-<section id="home" class="grid-bg">
-  <div class="hero-orb hero-orb-1"></div>
-  <div class="hero-orb hero-orb-2"></div>
-  <div class="hero-content">
-    <div class="hero-badge">
-      <span class="hero-badge-dot"></span>
-      Available for freelance projects
-    </div>
-    <h1 class="hero-headline">
-      <span class="gradient-text" id="typedText"></span><span class="cursor"></span>
-    </h1>
-    <p style="font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:20px;font-family:'Space Grotesk',sans-serif;">
-      A new age of creative tricks, premium design, aur futuristic identity
-    </p>
-    <p class="hero-sub">
-      I'm <strong style="color:var(--fg)">Anubhav Singh</strong>, known as <strong style="background:linear-gradient(135deg,#f4c542,#ffd700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Nytrixx</strong> — a 15-year-old developer from India crafting high-performance, visually stunning websites that drive results.
-    </p>
-    <div class="hero-btns">
-      <button class="btn-primary glow-gold" onclick="scrollToSection('contact')">
-        Hire Me &nbsp;→
-      </button>
-      <button class="btn-outline" onclick="scrollToSection('projects')">
-        View Projects &nbsp;›
-      </button>
-    </div>
-  </div>
-  <div class="scroll-indicator">
-    <span>Scroll down</span>
-    <div class="scroll-box"><div class="scroll-dot"></div></div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner">
-    <div class="section-header fade-in">
-      <div class="section-label">About Me</div>
-      <h2 class="section-title">The Developer Behind the Work</h2>
-    </div>
-    <div class="about-grid">
-      <div class="fade-in" style="transition-delay:0.1s">
-        <div class="about-text">
-          <p>I'm <span>Anubhav Singh</span>, known as <span style="background:linear-gradient(135deg,#f4c542,#ffd700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700;">Nytrixx</span> — only 15, a passionate web developer from India. I started coding at 13 and haven't stopped since. I specialize in building premium, high-performance websites that don't just look good — they convert.</p>
-          <p>From landing pages to full e-commerce platforms, I bring precision and creativity to every project. My clients get more than just a website — they get a digital asset built to last.</p>
-        </div>
-        <div class="about-tags">
-          <span class="tag">15 Years Old</span>
-          <span class="tag">India</span>
-          <span class="tag">2+ Years Coding</span>
-          <span class="tag">15+ Projects</span>
-        </div>
-        <div class="timeline">
-          <div class="timeline-label">Experience Timeline</div>
-          <div class="timeline-item">
-            <span class="timeline-year">2023</span>
-            <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-            <div class="timeline-event">Started learning HTML, CSS &amp; JavaScript</div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2024</span>
-            <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-            <div class="timeline-event">First freelance client — restaurant website</div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2024</span>
-            <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-            <div class="timeline-event">Expanded to React.js and advanced animations</div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2025</span>
-            <div class="timeline-dot-wrap"><div class="timeline-dot"></div></div>
-            <div class="timeline-event">15+ projects delivered across multiple industries</div>
-          </div>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.2s">
-        <div class="skills-label">Skills &amp; Expertise</div>
-        <div class="skill">
-          <div class="skill-header"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">95%</span></div>
-          <div class="skill-track"><div class="skill-fill" data-width="95"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-pct">88%</span></div>
-          <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-header"><span class="skill-name">React.js</span><span class="skill-pct">82%</span></div>
-          <div class="skill-track"><div class="skill-fill" data-width="82"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-header"><span class="skill-name">Animations &amp; Motion</span><span class="skill-pct">90%</span></div>
-          <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-header"><span class="skill-name">Responsive Design</span><span class="skill-pct">93%</span></div>
-          <div class="skill-track"><div class="skill-fill" data-width="93"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-header"><span class="skill-name">UI/UX Design</span><span class="skill-pct">80%</span></div>
-          <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="section-inner">
-    <div class="section-header fade-in">
-      <div class="section-label">Services</div>
-      <h2 class="section-title">What I Offer</h2>
-      <p class="section-sub">Premium web development packages tailored to every stage of your business journey.</p>
-    </div>
-    <div class="cards-4">
-      <div class="fade-in" style="transition-delay:0.05s">
-        <div class="card tilt">
-          <div class="card-tier">Basic</div>
-          <div class="card-price">₹5,000 – ₹15,000</div>
-          <ul class="card-features">
-            <li><span class="check">✓</span> Single page website</li>
-            <li><span class="check">✓</span> Responsive design</li>
-            <li><span class="check">✓</span> Basic animations</li>
-            <li><span class="check">✓</span> Contact form</li>
-            <li><span class="check">✓</span> Fast loading</li>
-            <li><span class="check">✓</span> 1 revision</li>
-          </ul>
-          <button class="card-btn outline-btn" onclick="scrollToSection('contact')">Get Started</button>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.1s">
-        <div class="card tilt">
-          <div class="card-tier">Standard</div>
-          <div class="card-price">₹15,000 – ₹40,000</div>
-          <ul class="card-features">
-            <li><span class="check">✓</span> Multi-page website</li>
-            <li><span class="check">✓</span> SEO optimized</li>
-            <li><span class="check">✓</span> Smooth animations</li>
-            <li><span class="check">✓</span> CMS integration</li>
-            <li><span class="check">✓</span> Social media links</li>
-            <li><span class="check">✓</span> 3 revisions</li>
-          </ul>
-          <button class="card-btn outline-btn" onclick="scrollToSection('contact')">Get Started</button>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.15s">
-        <div class="card popular tilt">
-          <span class="popular-badge">Most Popular</span>
-          <div class="card-tier">Advanced</div>
-          <div class="card-price">₹40,000 – ₹80,000</div>
-          <ul class="card-features">
-            <li><span class="check">✓</span> Custom design</li>
-            <li><span class="check">✓</span> Complex animations</li>
-            <li><span class="check">✓</span> Admin panel</li>
-            <li><span class="check">✓</span> API integration</li>
-            <li><span class="check">✓</span> Performance audit</li>
-            <li><span class="check">✓</span> Unlimited revisions</li>
-          </ul>
-          <button class="card-btn primary-btn glow-gold" onclick="scrollToSection('contact')">Get Started</button>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.2s">
-        <div class="card tilt">
-          <div class="card-tier">E-commerce</div>
-          <div class="card-price">₹80,000 – ₹1,50,000+</div>
-          <ul class="card-features">
-            <li><span class="check">✓</span> Online store</li>
-            <li><span class="check">✓</span> Payment gateway</li>
-            <li><span class="check">✓</span> Inventory management</li>
-            <li><span class="check">✓</span> Order tracking</li>
-            <li><span class="check">✓</span> Analytics dashboard</li>
-            <li><span class="check">✓</span> Priority support</li>
-          </ul>
-          <button class="card-btn outline-btn" onclick="scrollToSection('contact')">Get Started</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-inner">
-    <div class="section-header fade-in">
-      <div class="section-label">Portfolio</div>
-      <h2 class="section-title">Projects Showcase</h2>
-      <p class="section-sub">A selection of websites and applications I've built for real clients.</p>
-    </div>
-    <div class="cards-3">
-      <div class="fade-in" style="transition-delay:0.05s">
-        <div class="project-card tilt">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#f59e0b,#ea580c)">
-            <span class="project-thumb-title">RestaurantPro</span>
-            <div class="project-overlay">
-              <button class="overlay-btn primary">&#8599; Live Demo</button>
-              <button class="overlay-btn outline">&#60;/&#62; Code</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">RestaurantPro</div>
-            <p class="project-desc">A premium restaurant website with online reservations, menu showcase, and animated hero section.</p>
-            <div class="tech-tags"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.1s">
-        <div class="project-card tilt">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#ec4899,#e11d48)">
-            <span class="project-thumb-title">FashionStore</span>
-            <div class="project-overlay">
-              <button class="overlay-btn primary">&#8599; Live Demo</button>
-              <button class="overlay-btn outline">&#60;/&#62; Code</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">FashionStore</div>
-            <p class="project-desc">Full e-commerce fashion platform with product filtering, cart system, and smooth checkout flow.</p>
-            <div class="tech-tags"><span class="tech-tag">React</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.15s">
-        <div class="project-card tilt">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#06b6d4,#2563eb)">
-            <span class="project-thumb-title">TechStartup</span>
-            <div class="project-overlay">
-              <button class="overlay-btn primary">&#8599; Live Demo</button>
-              <button class="overlay-btn outline">&#60;/&#62; Code</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">TechStartup Landing</div>
-            <p class="project-desc">SaaS landing page with 3D animations, feature comparisons, and integrated waitlist form.</p>
-            <div class="tech-tags"><span class="tech-tag">React</span><span class="tech-tag">Framer</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.2s">
-        <div class="project-card tilt">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#22c55e,#059669)">
-            <span class="project-thumb-title">EduPlatform</span>
-            <div class="project-overlay">
-              <button class="overlay-btn primary">&#8599; Live Demo</button>
-              <button class="overlay-btn outline">&#60;/&#62; Code</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">EduPlatform</div>
-            <p class="project-desc">Online learning platform with course catalog, video player, progress tracking, and quizzes.</p>
-            <div class="tech-tags"><span class="tech-tag">React</span><span class="tech-tag">JS</span><span class="tech-tag">CSS</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.25s">
-        <div class="project-card tilt">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">
-            <span class="project-thumb-title">CryptoTracker</span>
-            <div class="project-overlay">
-              <button class="overlay-btn primary">&#8599; Live Demo</button>
-              <button class="overlay-btn outline">&#60;/&#62; Code</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">CryptoTracker</div>
-            <p class="project-desc">Real-time crypto dashboard with live charts, portfolio management, and price alerts.</p>
-            <div class="tech-tags"><span class="tech-tag">React</span><span class="tech-tag">JS</span><span class="tech-tag">API</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.3s">
-        <div class="project-card tilt">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#eab308,#d97706)">
-            <span class="project-thumb-title">AgencyWebsite</span>
-            <div class="project-overlay">
-              <button class="overlay-btn primary">&#8599; Live Demo</button>
-              <button class="overlay-btn outline">&#60;/&#62; Code</button>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-title">AgencyWebsite</div>
-            <p class="project-desc">High-end creative agency portfolio with parallax effects, case studies, and team showcase.</p>
-            <div class="tech-tags"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing">
-  <div class="section-inner">
-    <div class="section-header fade-in">
-      <div class="section-label">Pricing</div>
-      <h2 class="section-title">Transparent Pricing</h2>
-      <p class="section-sub">No hidden fees. Clear pricing, premium delivery.</p>
-    </div>
-    <div class="stats-row fade-in">
-      <div class="stat-item">
-        <div class="stat-number gold-text" data-target="15" data-suffix="+">0</div>
-        <div class="stat-label">Projects Delivered</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number gold-text" data-target="100" data-suffix="%">0</div>
-        <div class="stat-label">Client Satisfaction</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number gold-text" data-target="5" data-suffix="+">0</div>
-        <div class="stat-label">Technologies</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number gold-text" data-target="2" data-suffix="+">0</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-    </div>
-    <div class="payment-note fade-in">
-      <span>50% advance</span>
-      <span class="sep">+</span>
-      <span>50% on completion</span>
-    </div>
-    <div class="cards-4">
-      <div class="fade-in" style="transition-delay:0.05s">
-        <div class="card tilt">
-          <div class="card-tier">Basic</div>
-          <div style="font-size:1.75rem;font-weight:700;font-family:'Space Grotesk',sans-serif" class="gold-text">₹5,000</div>
-          <div class="card-price" style="font-size:0.75rem;color:var(--muted-fg);margin-top:2px">₹5,000 – ₹15,000</div>
-          <ul class="card-features">
-            <li><span class="check">✓</span> Single page website</li>
-            <li><span class="check">✓</span> Responsive design</li>
-            <li><span class="check">✓</span> Basic animations</li>
-            <li><span class="check">✓</span> Contact form</li>
-            <li><span class="check">✓</span> Fast loading</li>
-            <li><span class="check">✓</span> 1 revision</li>
-          </ul>
-          <button class="card-btn outline-btn" onclick="scrollToSection('contact')">Start Project</button>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.1s">
-        <div class="card tilt">
-          <div class="card-tier">Standard</div>
-          <div style="font-size:1.75rem;font-weight:700;font-family:'Space Grotesk',sans-serif" class="gold-text">₹15,000</div>
-          <div class="card-price" style="font-size:0.75rem;color:var(--muted-fg);margin-top:2px">₹15,000 – ₹40,000</div>
-          <ul class="card-features">
-            <li><span class="check">✓</span> Multi-page website</li>
-            <li><span class="check">✓</span> SEO optimized</li>
-            <li><span class="check">✓</span> Smooth animations</li>
-            <li><span class="check">✓</span> CMS integration</li>
-            <li><span class="check">✓</span> Social media links</li>
-            <li><span class="check">✓</span> 3 revisions</li>
-          </ul>
-          <button class="card-btn outline-btn" onclick="scrollToSection('contact')">Start Project</button>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.15s">
-        <div class="card popular tilt">
-          <span class="popular-badge">Best Value</span>
-          <div class="card-tier">Advanced</div>
-          <div style="font-size:1.75rem;font-weight:700;font-family:'Space Grotesk',sans-serif" class="gold-text">₹40,000</div>
-          <div class="card-price" style="font-size:0.75rem;color:var(--muted-fg);margin-top:2px">₹40,000 – ₹80,000</div>
-          <ul class="card-features">
-            <li><span class="check">✓</span> Custom design</li>
-            <li><span class="check">✓</span> Complex animations</li>
-            <li><span class="check">✓</span> Admin panel</li>
-            <li><span class="check">✓</span> API integration</li>
-            <li><span class="check">✓</span> Performance audit</li>
-            <li><span class="check">✓</span> Unlimited revisions</li>
-          </ul>
-          <button class="card-btn primary-btn glow-gold" onclick="scrollToSection('contact')">Start Project</button>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.2s">
-        <div class="card tilt">
-          <div class="card-tier">E-commerce</div>
-          <div style="font-size:1.75rem;font-weight:700;font-family:'Space Grotesk',sans-serif" class="gold-text">₹80,000</div>
-          <div class="card-price" style="font-size:0.75rem;color:var(--muted-fg);margin-top:2px">₹80,000 – ₹1,50,000+</div>
-          <ul class="card-features">
-            <li><span class="check">✓</span> Online store</li>
-            <li><span class="check">✓</span> Payment gateway</li>
-            <li><span class="check">✓</span> Inventory management</li>
-            <li><span class="check">✓</span> Order tracking</li>
-            <li><span class="check">✓</span> Analytics dashboard</li>
-            <li><span class="check">✓</span> Priority support</li>
-          </ul>
-          <button class="card-btn outline-btn" onclick="scrollToSection('contact')">Start Project</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-inner">
-    <div class="section-header fade-in">
-      <div class="section-label">Contact</div>
-      <h2 class="section-title">Let's Build Together</h2>
-      <p class="section-sub">Ready to start your project? Reach out and let's talk.</p>
-    </div>
-    <div class="contact-grid">
-      <div class="fade-in" style="transition-delay:0.1s">
-        <div class="contact-info">
-          <h3>Get in touch</h3>
-          <a href="tel:+919456853697" class="contact-item">
-            <div class="contact-icon">📞</div>
-            <div>
-              <div class="contact-lbl">Phone</div>
-              <div class="contact-val">+91 9456853697</div>
-            </div>
+        <div class="navRight">
+          <a class="ctaSmall" href="#contact">
+            <span>Hire Me</span>
+            <span aria-hidden="true">→</span>
           </a>
-          <a href="mailto:nytrixxofficial@gmail.com" class="contact-item">
-            <div class="contact-icon">✉</div>
-            <div>
-              <div class="contact-lbl">Email</div>
-              <div class="contact-val">nytrixxofficial@gmail.com</div>
-            </div>
-          </a>
-          <a href="https://l.instagram.com/?u=https%3A%2F%2Fsinghvansh2462-byte.github.io%2Fvanshcodes.x%2F%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio" target="_blank" rel="noopener noreferrer" class="contact-item">
-            <div class="contact-icon">📸</div>
-            <div>
-              <div class="contact-lbl">Instagram</div>
-              <div class="contact-val">@nytrixxofficial</div>
-            </div>
-          </a>
-          <div class="contact-note">
-            Typical response time: <strong>under 24 hours</strong><br>
-            Available for projects starting at <strong style="color:var(--primary)">₹5,000</strong>
+
+          <div class="hamburger">
+            <button class="hamburgerBtn" id="hamburger" aria-label="Open navigation">Menu</button>
           </div>
         </div>
       </div>
-      <div class="fade-in" style="transition-delay:0.2s">
-        <div class="contact-form-wrap">
-          <form id="contactForm" onsubmit="handleFormSubmit(event)">
-            <div class="form-group">
-              <label class="form-label">Your Name</label>
-              <input class="form-input" type="text" name="name" placeholder="John Doe" required />
+
+      <div class="mobileDrawer" id="mobileDrawer" role="navigation" aria-label="Mobile primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="heroGrid">
+        <div class="heroLeft reveal">
+          <div class="heroTopRow">
+            <div class="badge"><span class="dot" aria-hidden="true"></span><span>High-performance • Futuristic UI • Smooth animations</span></div>
+          </div>
+
+          <h2>
+            <span class="gradientText">A new age of creative tricks, premium design, futuristic identity</span>
+          </h2>
+
+          <p>
+            I’m <b>Anubhav Singh (Nytrixx)</b>, a 15-year-old developer from India crafting high-performance, visually stunning websites that drive results.
+          </p>
+
+          <div class="heroActions">
+            <a class="btn btnPrimary" href="#contact"><span>Hire Me →</span></a>
+            <a class="btn btnGhost" href="#projects"><span>View Projects ›</span></a>
+          </div>
+        </div>
+
+        <aside class="heroRight reveal" aria-label="Highlights">
+          <div class="orb" aria-hidden="true"></div>
+          <div class="kicker">Trusted for speed & polish</div>
+          <div class="statGrid" style="margin-top:14px">
+            <div class="stat">
+              <div class="v">15+ </div>
+              <div class="l">Projects delivered with clean UI + animation focus</div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Email Address</label>
-              <input class="form-input" type="email" name="email" placeholder="you@example.com" required />
+            <div class="stat">
+              <div class="v">React + Animations</div>
+              <div class="l">Modern frontend stacks for premium user experience</div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Message</label>
-              <textarea class="form-textarea" name="message" placeholder="Tell me about your project..." required></textarea>
+            <div class="stat">
+              <div class="v">Fast Loading</div>
+              <div class="l">Optimized layouts and performance-first design</div>
             </div>
-            <button type="submit" class="submit-btn glow-gold">Send Message</button>
+            <div class="stat">
+              <div class="v">Premium Aesthetic</div>
+              <div class="l">Dark theme with gold/cyan identity accents</div>
+            </div>
+          </div>
+          <div class="spark" aria-hidden="true"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="sectionHeader reveal">
+        <div>
+          <div class="kicker">About Me</div>
+          <h2>Built for impact. Designed for wow.</h2>
+        </div>
+        <p>
+          A timeline of growth and a skill matrix that shows what I can ship—fast, clean, and premium.
+        </p>
+      </div>
+
+      <div class="twoCol">
+        <div class="panel reveal">
+          <div class="kicker" style="margin-bottom: 12px">Timeline</div>
+          <div class="timeline">
+            <div class="tItem">
+              <div class="tDot" aria-hidden="true"></div>
+              <h3>Started coding at 13</h3>
+              <p>Learned fundamentals and built small projects to sharpen logic and UI instincts.</p>
+            </div>
+            <div class="tItem">
+              <div class="tDot" aria-hidden="true"></div>
+              <h3>First freelance client in 2024</h3>
+              <p>Delivered real-world work, refined communication, and improved delivery speed.</p>
+            </div>
+            <div class="tItem">
+              <div class="tDot" aria-hidden="true"></div>
+              <h3>Expanded into React.js & animations</h3>
+              <p>Focused on smooth micro-interactions, modern components, and performance.</p>
+            </div>
+            <div class="tItem">
+              <div class="tDot" aria-hidden="true"></div>
+              <h3>Delivered 15+ projects</h3>
+              <p>From landing pages to e-commerce experiences—always with a premium finish.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <div class="kicker" style="margin-bottom: 12px">Skills</div>
+          <div class="skillsList">
+            <div class="skillRow">
+              <div class="skillTop"><div class="sName">HTML & CSS</div><div class="sPct">95%</div></div>
+              <div class="bar" aria-hidden="true"><i data-pct="95"></i></div>
+            </div>
+            <div class="skillRow">
+              <div class="skillTop"><div class="sName">JavaScript</div><div class="sPct">88%</div></div>
+              <div class="bar" aria-hidden="true"><i data-pct="88"></i></div>
+            </div>
+            <div class="skillRow">
+              <div class="skillTop"><div class="sName">React.js</div><div class="sPct">82%</div></div>
+              <div class="bar" aria-hidden="true"><i data-pct="82"></i></div>
+            </div>
+            <div class="skillRow">
+              <div class="skillTop"><div class="sName">Animations</div><div class="sPct">90%</div></div>
+              <div class="bar" aria-hidden="true"><i data-pct="90"></i></div>
+            </div>
+            <div class="skillRow">
+              <div class="skillTop"><div class="sName">Responsive Design</div><div class="sPct">93%</div></div>
+              <div class="bar" aria-hidden="true"><i data-pct="93"></i></div>
+            </div>
+            <div class="skillRow">
+              <div class="skillTop"><div class="sName">UI/UX</div><div class="sPct">80%</div></div>
+              <div class="bar" aria-hidden="true"><i data-pct="80"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Packages -->
+    <section class="section" id="services">
+      <div class="sectionHeader reveal">
+        <div>
+          <div class="kicker">Services / Packages</div>
+          <h2>Pick your level. Get the premium finish.</h2>
+        </div>
+        <p>
+          Transparent packages designed for speed, quality, and outcomes.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="tag"><i aria-hidden="true"></i><span>Basic</span></div>
+          <h3>₹5,000 – ₹15,000</h3>
+          <div class="price">Single-page websites that load fast and look premium.</div>
+          <ul class="bullets">
+            <li><span class="check">✓</span><span>Single page + responsive layout</span></li>
+            <li><span class="check">✓</span><span>Basic animations & smooth effects</span></li>
+            <li><span class="check">✓</span><span>Contact form included</span></li>
+            <li><span class="check">✓</span><span>Fast loading performance</span></li>
+            <li><span class="check">✓</span><span>1 revision</span></li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="tag"><i aria-hidden="true"></i><span>Standard</span></div>
+          <h3>₹15,000 – ₹40,000</h3>
+          <div class="price">Multi-page, SEO-ready sites with growth features.</div>
+          <ul class="bullets">
+            <li><span class="check">✓</span><span>Multi-page structure</span></li>
+            <li><span class="check">✓</span><span>SEO optimized (on-page best practices)</span></li>
+            <li><span class="check">✓</span><span>CMS integration plan</span></li>
+            <li><span class="check">✓</span><span>Social links & conversion-ready sections</span></li>
+            <li><span class="check">✓</span><span>3 revisions</span></li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="tag"><i aria-hidden="true"></i><span>Advanced</span></div>
+          <h3>₹40,000 – ₹80,000</h3>
+          <div class="price">Custom design with complex animations and powerful integrations.</div>
+          <ul class="bullets">
+            <li><span class="check">✓</span><span>Custom design & premium UI system</span></li>
+            <li><span class="check">✓</span><span>Complex animations & interaction logic</span></li>
+            <li><span class="check">✓</span><span>Admin panel & content management</span></li>
+            <li><span class="check">✓</span><span>API integration</span></li>
+            <li><span class="check">✓</span><span>Unlimited revisions</span></li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="tag"><i aria-hidden="true"></i><span>E-commerce</span></div>
+          <h3>₹80,000 – ₹1,50,000+</h3>
+          <div class="price">Online stores with payments, inventory, tracking & analytics.</div>
+          <ul class="bullets">
+            <li><span class="check">✓</span><span>Online store + product pages</span></li>
+            <li><span class="check">✓</span><span>Payment gateway integration</span></li>
+            <li><span class="check">✓</span><span>Inventory & order tracking</span></li>
+            <li><span class="check">✓</span><span>Analytics dashboard</span></li>
+            <li><span class="check">✓</span><span>Priority support</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects Showcase -->
+    <section class="section" id="projects">
+      <div class="sectionHeader reveal">
+        <div>
+          <div class="kicker">Projects</div>
+          <h2>Selected work with premium motion.</h2>
+        </div>
+        <p>
+          Each project is designed for clarity, performance, and conversion.
+        </p>
+      </div>
+
+      <div class="cards" style="gap: 14px">
+        <div class="project reveal">
+          <div class="thumb" aria-hidden="true"></div>
+          <h3>RestaurantPro</h3>
+          <p>Premium restaurant site with reservations & an animated hero experience.</p>
+          <div class="mini">
+            <span class="pill">Reservations</span>
+            <span class="pill">Animated Hero</span>
+          </div>
+        </div>
+
+        <div class="project reveal">
+          <div class="thumb" aria-hidden="true"></div>
+          <h3>FashionStore</h3>
+          <p>Full e-commerce fashion platform with product grids and conversion UX.</p>
+          <div class="mini">
+            <span class="pill">E-commerce</span>
+            <span class="pill">UI/UX</span>
+          </div>
+        </div>
+
+        <div class="project reveal">
+          <div class="thumb" aria-hidden="true"></div>
+          <h3>TechStartup Landing</h3>
+          <p>SaaS landing with 3D-style motion, futuristic sections, and CTA focus.</p>
+          <div class="mini">
+            <span class="pill">3D Motion</span>
+            <span class="pill">SaaS</span>
+          </div>
+        </div>
+
+        <div class="project reveal">
+          <div class="thumb" aria-hidden="true"></div>
+          <h3>EduPlatform</h3>
+          <p>Online learning platform with video player layout and quiz interactions.</p>
+          <div class="mini">
+            <span class="pill">Video Player</span>
+            <span class="pill">Quizzes</span>
+          </div>
+        </div>
+
+        <div class="project reveal">
+          <div class="thumb" aria-hidden="true"></div>
+          <h3>CryptoTracker</h3>
+          <p>Real-time crypto dashboard with live chart UI & data-friendly design.</p>
+          <div class="mini">
+            <span class="pill">Live Charts</span>
+            <span class="pill">Dashboard</span>
+          </div>
+        </div>
+
+        <div class="project reveal">
+          <div class="thumb" aria-hidden="true"></div>
+          <h3>AgencyWebsite</h3>
+          <p>Creative agency portfolio with parallax effects and premium branding flow.</p>
+          <div class="mini">
+            <span class="pill">Parallax</span>
+            <span class="pill">Branding</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+      <div class="sectionHeader reveal">
+        <div>
+          <div class="kicker">Pricing</div>
+          <h2>Simple payment structure. Zero confusion.</h2>
+        </div>
+        <p>
+          Transparent payment: <b>50% advance</b> + <b>50% on completion</b>.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="cardWide card reveal">
+          <div class="tag"><i aria-hidden="true"></i><span>Basic</span></div>
+          <h3>₹5,000 – ₹15,000</h3>
+          <ul class="bullets">
+            <li><span class="check">✓</span><span>Start: 50% advance</span></li>
+            <li><span class="check">✓</span><span>Finish: 50% on completion</span></li>
+          </ul>
+          <div style="margin-top:14px">
+            <a class="btn btnPrimary" href="#contact" role="button"><span>Start Project</span></a>
+          </div>
+        </article>
+
+        <article class="cardWide card reveal">
+          <div class="tag"><i aria-hidden="true"></i><span>Standard</span></div>
+          <h3>₹15,000 – ₹40,000</h3>
+          <ul class="bullets">
+            <li><span class="check">✓</span><span>Start: 50% advance</span></li>
+            <li><span class="check">✓</span><span>Finish: 50% on completion</span></li>
+          </ul>
+          <div style="margin-top:14px">
+            <a class="btn btnPrimary" href="#contact" role="button"><span>Start Project</span></a>
+          </div>
+        </article>
+
+        <article class="cardWide card reveal">
+          <div class="tag"><i aria-hidden="true"></i><span>Advanced</span></div>
+          <h3>₹40,000 – ₹80,000</h3>
+          <ul class="bullets">
+            <li><span class="check">✓</span><span>Start: 50% advance</span></li>
+            <li><span class="check">✓</span><span>Finish: 50% on completion</span></li>
+          </ul>
+          <div style="margin-top:14px">
+            <a class="btn btnPrimary" href="#contact" role="button"><span>Start Project</span></a>
+          </div>
+        </article>
+
+        <article class="cardWide card reveal">
+          <div class="tag"><i aria-hidden="true"></i><span>E-commerce</span></div>
+          <h3>₹80,000 – ₹1,50,000+</h3>
+          <ul class="bullets">
+            <li><span class="check">✓</span><span>Start: 50% advance</span></li>
+            <li><span class="check">✓</span><span>Finish: 50% on completion</span></li>
+          </ul>
+          <div style="margin-top:14px">
+            <a class="btn btnPrimary" href="#contact" role="button"><span>Start Project</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="sectionHeader reveal">
+        <div>
+          <div class="kicker">Contact</div>
+          <h2>Let’s build something premium.</h2>
+        </div>
+        <p>
+          Response time: <b>under 24 hours</b>.
+        </p>
+      </div>
+
+      <div class="contactGrid">
+        <div class="panel reveal">
+          <div class="contactMeta">
+            <div class="metaRow">
+              <div class="metaIcon" aria-hidden="true">☎</div>
+              <div>
+                <b>Phone</b>
+                <a href="tel:+919456853697">+91 9456853697</a>
+                <span>Call or WhatsApp for quick updates.</span>
+              </div>
+            </div>
+            <div class="metaRow">
+              <div class="metaIcon" aria-hidden="true">✉</div>
+              <div>
+                <b>Email</b>
+                <a href="mailto:nytrixxofficial@gmail.com">nytrixxofficial@gmail.com</a>
+                <span>Best for detailed project requirements.</span>
+              </div>
+            </div>
+            <div class="metaRow">
+              <div class="metaIcon" aria-hidden="true">⌁</div>
+              <div>
+                <b>Instagram</b>
+                <a href="https://instagram.com/nytrixxofficial" target="_blank" rel="noopener noreferrer">@nytrixxofficial</a>
+                <span>Behind-the-scenes design & animations.</span>
+              </div>
+            </div>
+            <div class="metaRow">
+              <div class="metaIcon" aria-hidden="true">💬</div>
+              <div>
+                <b>WhatsApp</b>
+                <a href="https://wa.me/919456853697" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+                <span>Fastest way to start.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <div class="kicker" style="margin-bottom: 10px">Send a message</div>
+          <form id="contactForm">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project" required></textarea>
+            </div>
+
+            <div class="formActions">
+              <button class="btn btnPrimary" type="submit"><span>Submit</span><span aria-hidden="true">→</span></button>
+              <div class="hint">No backend needed for demo. This will open your email app.</div>
+            </div>
           </form>
         </div>
       </div>
-    </div>
+    </section>
+
+    <footer>
+      <div class="footInner">
+        <div><b>Nytrixx © 2025.</b> All rights reserved.</div>
+        <div class="social">
+          <a class="ctaSmall" style="padding:10px 12px" href="https://instagram.com/nytrixxofficial" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="ctaSmall" style="padding:10px 12px" href="https://wa.me/919456853697" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a class="ctaSmall" style="padding:10px 12px" href="mailto:nytrixxofficial@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
   </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <span class="footer-logo">Nytrixx</span>
-    <span class="footer-copy">© 2025 Nytrixx. All rights reserved.</span>
-    <div class="footer-links">
-      <a href="https://l.instagram.com/?u=https%3A%2F%2Fsinghvansh2462-byte.github.io%2Fvanshcodes.x%2F%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio" target="_blank" rel="noopener noreferrer" title="Instagram">📸</a>
-      <a href="https://wa.me/919456853697" target="_blank" rel="noopener noreferrer" class="wa" title="WhatsApp">💬</a>
-      <a href="mailto:nytrixxofficial@gmail.com" title="Email">✉</a>
-    </div>
-  </div>
-</footer>
-
-<!-- WhatsApp Float -->
-<a href="https://wa.me/919456853697" target="_blank" rel="noopener noreferrer" class="wa-float" title="Chat on WhatsApp">💬</a>
-
-<script>
-  // ── THEME ──
-  const html = document.documentElement;
-  const themeBtn = document.getElementById('themeBtn');
-  let dark = localStorage.getItem('theme') !== 'light';
-
-  function applyTheme() {
-    html.classList.toggle('dark', dark);
-    themeBtn.textContent = dark ? '☀' : '🌙';
-  }
-  applyTheme();
-
-  function toggleTheme() {
-    dark = !dark;
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
-    applyTheme();
-  }
-
-  // ── NAVBAR SCROLL ──
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
-  });
-
-  // ── MOBILE MENU ──
-  const mobileMenu = document.getElementById('mobileMenu');
-  const hamburger = document.getElementById('hamburger');
-  function toggleMenu() {
-    mobileMenu.classList.toggle('open');
-    hamburger.textContent = mobileMenu.classList.contains('open') ? '✕' : '☰';
-  }
-
-  // ── SMOOTH SCROLL ──
-  function scrollToSection(id) {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    mobileMenu.classList.remove('open');
-    hamburger.textContent = '☰';
-  }
-
-  // ── TYPING EFFECT ──
-  const strings = [
-    'I build premium websites',
-    'I craft digital experiences',
-    'I turn ideas into reality',
-    'I build your vision',
-  ];
-  let sIdx = 0, cIdx = 0, deleting = false;
-  const typedEl = document.getElementById('typedText');
-
-  function type() {
-    const cur = strings[sIdx];
-    if (!deleting && cIdx < cur.length) {
-      typedEl.textContent = cur.slice(0, ++cIdx);
-      setTimeout(type, 80);
-    } else if (!deleting && cIdx === cur.length) {
-      setTimeout(() => { deleting = true; type(); }, 2000);
-    } else if (deleting && cIdx > 0) {
-      typedEl.textContent = cur.slice(0, --cIdx);
-      setTimeout(type, 40);
-    } else {
-      deleting = false;
-      sIdx = (sIdx + 1) % strings.length;
-      setTimeout(type, 200);
+  <script>
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    if (hamburger && mobileDrawer) {
+      hamburger.addEventListener('click', () => {
+        mobileDrawer.classList.toggle('open');
+      });
+      mobileDrawer.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => mobileDrawer.classList.remove('open'));
+      });
     }
-  }
-  type();
 
-  // ── FADE IN ON SCROLL ──
-  const fades = document.querySelectorAll('.fade-in');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-    });
-  }, { threshold: 0.1, rootMargin: '-60px' });
-  fades.forEach(el => obs.observe(el));
-
-  // ── SKILL BARS ──
-  const skillObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('.skill-fill').forEach(bar => {
-          bar.style.width = bar.dataset.width + '%';
-        });
-        skillObs.unobserve(e.target);
+    // Scroll reveals
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
       }
-    });
-  }, { threshold: 0.3 });
-  document.querySelectorAll('.about-grid').forEach(el => skillObs.observe(el));
+    }, {threshold: .12});
+    revealEls.forEach(el => io.observe(el));
 
-  // ── COUNT UP ──
-  const countObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('[data-target]').forEach(el => {
-          const target = parseInt(el.dataset.target);
-          const suffix = el.dataset.suffix || '';
-          let cur = 0;
-          const step = Math.max(1500 / target, 15);
-          const timer = setInterval(() => {
-            cur = Math.min(cur + 1, target);
-            el.textContent = cur + suffix;
-            if (cur >= target) clearInterval(timer);
-          }, step);
-        });
-        countObs.unobserve(e.target);
+    // Animate skill bars when visible
+    const skillBars = document.querySelectorAll('.bar > i');
+    const io2 = new IntersectionObserver((entries)=>{
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          const i = e.target;
+          const pct = Number(i.getAttribute('data-pct') || '0');
+          i.style.transition = 'width 1.1s ease';
+          i.style.width = pct + '%';
+          io2.unobserve(i);
+        }
       }
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('.stats-row').forEach(el => countObs.observe(el));
+    }, {threshold: .35});
+    skillBars.forEach(b => io2.observe(b));
 
-  // ── 3D TILT ──
-  document.querySelectorAll('.tilt').forEach(el => {
-    el.addEventListener('mousemove', (e) => {
-      const rect = el.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) - rect.width / 2) / (rect.width / 2);
-      const y = ((e.clientY - rect.top) - rect.height / 2) / (rect.height / 2);
-      el.style.transform = `perspective(800px) rotateX(${y * -7}deg) rotateY(${x * 7}deg) scale(1.02)`;
-    });
-    el.addEventListener('mouseleave', () => {
-      el.style.transform = 'perspective(800px) rotateX(0) rotateY(0) scale(1)';
-    });
-  });
+    // Contact form -> email compose
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
 
-  // ── CONTACT FORM ──
-  function handleFormSubmit(e) {
-    e.preventDefault();
-    e.target.reset();
-    const toast = document.getElementById('toast');
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3500);
-  }
-</script>
+        const subject = encodeURIComponent(`Project inquiry from ${name}`);
+        const body = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\n— Sent from Nytrixx portfolio contact form`
+        );
+
+        window.location.href = `mailto:nytrixxofficial@gmail.com?subject=${subject}&body=${body}`;
+      });
+    }
+  </script>
 </body>
 </html>
+
